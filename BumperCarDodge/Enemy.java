@@ -14,6 +14,11 @@ public class Enemy extends Car
      */
     public void act() 
     {
-        // Add your action code here.
+        // Add your afction code here.
+        if (isTouching(Player))
+{
+    
+}
+        
     }    
 }
