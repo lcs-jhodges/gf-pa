@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * An arena for the game to take place in
  * 
- * @author (your name) 
+ * @Jack Hodges
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class Arena extends World
 {
 
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class Arena.
      * 
      */
-    public MyWorld()
+    public Arena()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(2048, 1536, 1); 
     }
 }
