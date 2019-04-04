@@ -14,11 +14,20 @@ public class Enemy extends Car
      */
     public void act() 
     {
-        // Add your afction code here.
-        if (isTouching(Player))
-{
-    
-}
-        
-    }    
+        // Add your action code here.
+        if (isAtEdge())
+        {
+            turn(17);
+        }
+        if (isTouching(Player.class))
+        {
+            Greenfoot.stop();
+        }
+        if (Greenfoot.getRandomNumber(100)<10)
+        {
+            turn(Greenfoot.getRandomNumber(45));
+
+        }
+        move(5);
+    }
 }
