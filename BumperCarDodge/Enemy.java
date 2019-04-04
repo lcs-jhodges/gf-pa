@@ -41,4 +41,12 @@ public class Enemy extends Car
         }
         move(2*speedMultiplier);
     }
+    
+    /**
+     * changeSpeed
+     */
+    void changeSpeed(int level)
+    {
+        speedMultiplier = level;
+    }
 }
