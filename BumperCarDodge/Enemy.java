@@ -8,6 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Car
 {
+    // Instance variable
+    int speedMultiplier;
+    
+    /**
+     * Constructor
+     */
+    Enemy(int level)
+    {
+        speedMultiplier = level;
+    }
+    
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,6 +39,6 @@ public class Enemy extends Car
             turn(Greenfoot.getRandomNumber(45));
 
         }
-        move(2);
+        move(2*speedMultiplier);
     }
 }
