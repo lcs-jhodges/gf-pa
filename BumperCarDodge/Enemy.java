@@ -28,6 +28,6 @@ public class Enemy extends Car
             turn(Greenfoot.getRandomNumber(45));
 
         }
-        move(5);
+        move(2);
     }
 }
