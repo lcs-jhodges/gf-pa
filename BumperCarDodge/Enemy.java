@@ -9,15 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Car
 {
     // Instance variable
-    int speedMultiplier;
+    
+    int time = 900;
+    
+    int speed;
     
     /**
      * Constructor
      */
-    Enemy(int level)
-    {
-        speedMultiplier = level;
-    }
+    
+    
     
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
@@ -26,6 +27,9 @@ public class Enemy extends Car
     public void act() 
     {
         // Add your action code here.
+        time = time +1;
+        speed = time/900;
+        
         if (isAtEdge())
         {
             turn(17);
@@ -34,19 +38,17 @@ public class Enemy extends Car
         {
             Greenfoot.stop();
         }
-        if (Greenfoot.getRandomNumber(100)<10)
+        if (Greenfoot.getRandomNumber(100)<5)
         {
             turn(Greenfoot.getRandomNumber(45));
 
         }
-        move(2*speedMultiplier);
+        move(speed);
+        
     }
     
     /**
      * changeSpeed
      */
-    void changeSpeed(int level)
-    {
-        speedMultiplier = level;
-    }
+    
 }
